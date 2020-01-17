@@ -9,7 +9,7 @@ import { ProjectService } from '../project.service';
   templateUrl: './project-detail.component.html',
   styleUrls: ['./project-detail.component.css'],
   host: {
-    '(window:resize)': 'onResize($event)',
+    '(window:resize)': 'onResize()',
   }
 })
 export class ProjectDetailComponent implements OnInit {
