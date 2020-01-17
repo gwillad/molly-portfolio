@@ -4,6 +4,8 @@
 
 .blurb {
 	text-align: left;
+	width: 75%;
+	margin-left: 12%;
 }
 
 .image {
@@ -14,4 +16,15 @@
 
 li {
 	display: block;
+}
+
+#imageContent {
+	width: 67%;
+	float: right;
+}
+
+#blurbContent {
+	float: left;
+	width: 25%;
+	text-align: left;
 }

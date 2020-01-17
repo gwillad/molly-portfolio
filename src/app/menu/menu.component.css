@@ -1,15 +1,12 @@
-#chevron {
-	width: 100px;
-	height: 100px;
-	float: right;
-}
-
-
 #menu-list {
 	margin: 0;
 	padding: 0;
 }
 
-.projectType {
-	color: #FFF;
+.menu-link {
+	padding: 0 5px 0 5px;
+}
+
+.menu-link:hover {
+	cursor: pointer;
 }
