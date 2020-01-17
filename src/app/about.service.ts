@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { About, Resume } from './about';
-import { ABOUT, RESUME } from "./mock-projects";
+import { ABOUT, RESUME } from "../assets/data/data";
 
 import { Observable, of } from "rxjs";
 
