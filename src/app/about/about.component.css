@@ -1,0 +1,17 @@
+#content-container {
+	text-align: center;
+}
+
+.blurb {
+	text-align: left;
+}
+
+.image {
+	max-width: 100%;
+	max-height: 100vh;
+	margin: auto;
+}
+
+li {
+	display: block;
+}

@@ -1,0 +1,10 @@
+<div id="projects"> 
+	<ul>
+		<li *ngFor="let project of projects"> 
+			<div class="image-wrap" routerLink="/details/{{project.id}}">
+				<img class="image" src="{{project.repImage.loc}}{{project.repImage.fname}}" />
+				<p class="image-description">{{project.name}}</p>
+			</div>
+		</li>
+	</ul>
+</div>

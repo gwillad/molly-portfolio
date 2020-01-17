@@ -1,0 +1,25 @@
+#titlebar {
+	position: fixed;
+	left: 0;
+	top: 0;
+	background: #fff;
+	height: 50px;
+	width: 100%;
+	z-index: 1000;
+	border-bottom: 1px solid black;
+}
+
+#title {
+	color: #000;
+	margin: 10px;
+	padding: 0;
+}
+
+app-menu {
+	display: inline;
+	float: right;
+}
+
+#router-outlet {
+	margin-top: 60px;
+}

@@ -1,0 +1,14 @@
+<div id="content-container"> 
+	<h2>{{project.name}}</h2>
+	<ul> 
+		<li *ngFor="let content of project.arrangedContent">
+			<div *ngIf="isImage(content)">
+				<img src="{{content.loc}}{{content.fname}}" class="image" />
+			</div>
+			<div *ngIf="!isImage(content)">
+				<p class="blurb">{{content}}</p>
+			</div>
+		</li>
+	</ul>
+	<a routerLink="/projects">back</a>
+</div>
