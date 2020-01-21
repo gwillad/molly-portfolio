@@ -7,6 +7,30 @@
 	padding: 0 5px 0 5px;
 }
 
-.menu-link:hover {
+.menu-link:hover, .dropdown-menu-link:hover {
 	cursor: pointer;
+}
+
+#dropdown-button {
+	width: 100px;
+}
+
+svg {
+	float: right;
+	cursor: pointer;
+}
+
+.dropdown-menu-link {
+	display: block;
+}
+
+#dropdown-container {
+	border: solid 1px #fff;
+	background: #fff;
+	width: auto;
+	padding-left: 3px;
+}
+
+.hidden {
+	display: none;
 }

@@ -24,12 +24,14 @@ export class ProjectDetailComponent implements OnInit {
   public separatedContent: { blurbs: string[], images: Image[] }
 
   ngOnInit() {
-  	this.getProject();
+    this.route.params.subscribe(routeParams => {
+      this.getProject(routeParams.id);
+    });
     this.onResize();
   }
 
-    getProject(): void {
-  		const projectId = +this.route.snapshot.paramMap.get('id');
+    getProject(id: string): void {
+  		const projectId = +id;
   		this.projectService.getProject(projectId)
   			.subscribe(project => {
   				this.project = project;
