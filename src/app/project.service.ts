@@ -1,21 +1,25 @@
 import { Injectable } from '@angular/core';
 import { Project } from "./project";
-import { PROJECTS } from "../assets/data/data";
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { Observable, of } from "rxjs";
+import { Observable } from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProjectService {
 
-  constructor() { }
+  constructor(
+  	private http: HttpClient
+  ) { }
+
+  private projectsUrl = '/api/projects';
 
   getProjects(): Observable<Project[]> {
- 		return of(PROJECTS);
+ 	return this.http.get<Project[]>(this.projectsUrl);
   }
 
   getProject(id: number): Observable<Project> {
-    return of(PROJECTS.find(value => value.id === id));
+  	return this.http.get<Project>(this.projectsUrl + '/' + id.toString());
   }
 }

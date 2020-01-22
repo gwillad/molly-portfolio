@@ -6,7 +6,7 @@ const lorem: string = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
 export const PROJECTS: Project[] = [
 	{ 
 		id: 11, 
-		name: "industry Project 1", 
+		name: "Industry Project", 
 		arrangedContent: [
 			{loc: "assets/images/", fname: "inl-1.jpg"}, 
 			"one blurb", 
@@ -20,7 +20,7 @@ export const PROJECTS: Project[] = [
 	},
 	{ 
 		id: 12, 
-		name: "academic Project 1", 
+		name: "Academic Project", 
 		arrangedContent: [
 			{loc: "assets/images/", fname: "pnnl-1.jpg"}, 
 			"one" + lorem,
@@ -39,7 +39,7 @@ export const PROJECTS: Project[] = [
 	},
 	{ 
 		id: 13,
-		name: "Thesis project", 
+		name: "Thesis Project", 
 		arrangedContent: [
 			{loc: "assets/images/", fname: "jax-1.jpg"}, 
 			"one" + lorem,

@@ -1,21 +1,27 @@
 import { Injectable } from '@angular/core';
 import { About, Resume } from './about';
-import { ABOUT, RESUME } from "../assets/data/data";
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { Observable, of } from "rxjs";
+
+import { Observable } from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class AboutService {
 
-  constructor() { }
+  constructor(
+  	private http: HttpClient,
+  ) { }
+
+  private aboutUrl = 'api/about';
+  private resumeUrl = 'api/resume';
 
   getAbout(): Observable<About> {
-  	return of(ABOUT);
+  	return this.http.get<About>(this.aboutUrl);
   }
 
   getResume(): Observable<Resume> {
-  	return of(RESUME);
+  	return this.http.get<Resume>(this.resumeUrl);
   }
 }
