@@ -1,11 +1,6 @@
 <ul id="menu-list"> 
-	<li id="dropdown-button">
-		<div (mouseenter)="showDropdown()" (mouseleave)="hideDropdown()">
-			<svg height="15px" width="20px" xmlns="http://www.w3.org/2000/svg">
-				<path d="M 0 5 l 10 10 l 10 -10" />
-			</svg>
-			<h3 routerLink="/projects" class="menu-link">Projects</h3>
-		</div>
+	<li>
+		<h3 routerLink="/projects" class="menu-link">Projects</h3>
 	</li>
 	<li>
 		<h3 routerLink="/about" class="menu-link">About</h3>
@@ -14,13 +9,3 @@
 		<h3 routerLink="/resume" class="menu-link">Resume</h3>
 	</li>
 </ul>
-
-<div [className]="dropdownOpen ? 'display' : 'hidden'" id="dropdown-container" (mouseenter)="showDropdown()" (mouseleave)="hideDropdown()" (click)="hideDropdown()"> 
-	<div id="dropdown-hover-div">
-		<ul id="dropdown-list"> 
-			<li *ngFor="let project of projects" class="dropdown-menu-link">
-				<h3 routerLink="/details/{{project.id}}">{{project.name}}</h3>
-			</li>		
-		</ul>
-	</div>
-</div>

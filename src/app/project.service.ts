@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Project } from "./project";
+import { Project, Image } from "./project";
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Observable } from "rxjs";
@@ -14,6 +14,7 @@ export class ProjectService {
   ) { }
 
   private projectsUrl = '/api/projects';
+  private splashUrl = '/api/splash';
 
   getProjects(): Observable<Project[]> {
  	return this.http.get<Project[]>(this.projectsUrl);
@@ -21,5 +22,9 @@ export class ProjectService {
 
   getProject(id: number): Observable<Project> {
   	return this.http.get<Project>(this.projectsUrl + '/' + id.toString());
+  }
+
+  getSplashImages(): Observable<Image[]> {
+    return this.http.get<Image[]>(this.splashUrl);
   }
 }

@@ -1,4 +1,4 @@
-export type Image = { loc: string, fname: string };
+export type Image = { loc: string, fname: string, class?: string };
 
 export type Content = string | Image;
 

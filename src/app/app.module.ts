@@ -12,6 +12,7 @@ import { MenuComponent } from './menu/menu.component';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
 import { AboutComponent } from './about/about.component';
 import { ResumeComponent } from './resume/resume.component';
+import { SplashComponent } from './splash/splash.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ResumeComponent } from './resume/resume.component';
     MenuComponent,
     ProjectDetailComponent,
     AboutComponent,
-    ResumeComponent
+    ResumeComponent,
+    SplashComponent
   ],
   imports: [
     BrowserModule,

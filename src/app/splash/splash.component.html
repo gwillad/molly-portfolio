@@ -1,0 +1,14 @@
+<div id='splash'>
+	<ul>
+		<li *ngFor="let image of images" class="image-list-item {{image.class}}">
+			<img src="{{image.loc}}{{image.fname}}" />
+		</li>
+	</ul>
+	<ul>
+		<li *ngFor="let image of images">
+			<svg height="10px" width="10px" xmlns="http://www.w3.org/2000/svg">
+				<ellipse cx="5" cy="5" rx="5" ry="5" />
+			</svg>
+		</li>
+	</ul>
+</div>

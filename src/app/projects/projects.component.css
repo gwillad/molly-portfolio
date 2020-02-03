@@ -2,10 +2,16 @@
 	text-align: center;
 }
 
+li {
+	width: 20%;
+	padding: 10px;
+}
+
 .image-wrap {
 	position: relative;
 	display: grid;
 	height: 100%;
+	width: 100%;
 }
 
 .image-description {
@@ -34,4 +40,8 @@
 	max-width: 100%;
 	max-height: 100vh;
 	margin: auto;
+}
+
+li {
+
 }

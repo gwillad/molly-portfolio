@@ -15,31 +15,10 @@ export class MenuComponent implements OnInit {
     this.getProjects();
   }
 
-  public dropdownOpen: boolean = false;
   public projects: Project[] = [];
-  closeDropdownTimer: NodeJS.Timer | null = null;
 
   getProjects(): void {
     this.projectService.getProjects()
       .subscribe(projects => this.projects = projects);
-  }
-
-  showDropdown(): void {
-    this.clearDropdownTimer();
-    this.dropdownOpen = true;
-  }
-
-  hideDropdown(): void {
-    this.clearDropdownTimer();
-    this.closeDropdownTimer = setTimeout(
-      ()=> this.dropdownOpen = false, 
-      100);
-  }
-
-  clearDropdownTimer(): void {
-    if (this.closeDropdownTimer) {
-      clearTimeout(this.closeDropdownTimer);
-      this.closeDropdownTimer = null;
-    }
   }
 }

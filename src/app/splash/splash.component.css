@@ -1,0 +1,17 @@
+.image-list-item {
+	width: 85%;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100vh;
+	margin: auto;
+}
+
+#splash {
+	text-align: center;
+}
+
+.hidden {
+	display: none;
+}
