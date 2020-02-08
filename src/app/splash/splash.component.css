@@ -1,6 +1,13 @@
-#slide-container {
+.small-slide-container {
 	height: auto;
 	width: 75%;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+.wide-slide-container {
+	height: auto;
+	width: 100%;
 	overflow: hidden;
 	margin: 0 auto;
 }
@@ -121,8 +128,33 @@ img[data-img-count="10"] {
 	width: calc(100% / 10); 
 }
 
+.small-left-button {
+	position: absolute;
+	left: calc(12.5% - 20px);
+	top: calc(50% - 10px);
+}
+
+.wide-left-button {
+	position: absolute;
+	left: -20px;
+	top: calc(50% - 10px);
+}
+
+.small-right-button {
+	position: absolute;
+	left: 87.5%;
+	top: calc(50% - 10px);
+}
+
+.wide-right-button {
+	position: absolute;
+	left: 100%;
+	top: calc(50% - 10px);
+}
+
 #splash {
 	text-align: center;
+	position: relative;
 }
 
 .button:hover {

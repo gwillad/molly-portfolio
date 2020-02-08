@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Input } from '@angular/core';
 
 import { ProjectService } from '../project.service';
 import { Image } from '../project';
@@ -15,48 +15,65 @@ export class SplashComponent implements OnInit {
 
   constructor(private projectService: ProjectService) { }
 
+  // template content
   public images: Image[];
   public imagesLength: number = 0;
   public currentSlideTransform: string = "";
-  @ViewChild('slideContainer', {static: false}) slideContainer: ElementRef;
+  @ViewChild('slideContainer', { static: false }) slideContainer: ElementRef;
 
+  // input vars
+  @Input() content: Image[] | null = null;
+  @Input() useAutoScroll: boolean = true;
+  @Input() useSideButtons: boolean = false;
+  @Input() useWideContent: boolean = false;
+
+  // private vars
   currentImageIndex: number;
-  imageTimer: NodeJS.Timer | null;
+  autoScrollTimer: NodeJS.Timer | null;
 
+  // life cycle events
   ngOnInit() {
   	this.getSplashImages();
   }
 
+  ngAfterViewInit() {
+    this.switchCurrentImage(0);
+    this.tryStartAutoScroll();
+  }
+
+  // data retrieval
   getSplashImages(): void {
+    if (this.content !== null) {
+      this.images = this.content;
+      this.imagesLength = this.images.length;
+    } else {
   	this.projectService.getSplashImages()
   		.subscribe(images => {
 	  		this.images = images;
         this.imagesLength = images.length;
-	  		this.switchCurrentImage(0);
-	  		this.startImageSwitching();
   		});
-  }
-
-  startImageSwitching(): void {
-    if (this.imageTimer) {
-      clearTimeout(this.imageTimer);
     }
-  	this.imageTimer = setTimeout(() => this.switchImage(), 5000);
   }
 
-  switchImage(): void {
-  	this.switchCurrentImage((this.currentImageIndex + 1) % this.images.length);
-  	this.startImageSwitching();
+  // image switching
+  tryStartAutoScroll(): void {
+    if (!this.useAutoScroll) {
+      return;
+    }
+
+    if (this.autoScrollTimer) {
+      clearTimeout(this.autoScrollTimer);
+    }
+
+  	this.autoScrollTimer = setTimeout(() => this.nextImage(), 5000);
   }
 
   switchCurrentImage(newIndex: number): void {
     this.currentImageIndex = newIndex;
 
-    const imageWidth = this.slideContainer.nativeElement.offsetWidth;
-
-    const temp = newIndex * -imageWidth;
-    if (temp !== 0) {
-      this.currentSlideTransform = `translateX(${temp}px)`;
+    const dx = newIndex * -this.slideContainer.nativeElement.offsetWidth;
+    if (dx !== 0) {
+      this.currentSlideTransform = `translateX(${dx}px)`;
     } else {
       this.currentSlideTransform = "";
     }
@@ -64,10 +81,22 @@ export class SplashComponent implements OnInit {
 
   goToIndex(i: number): void {
     this.switchCurrentImage(i);
-    this.startImageSwitching();
+    this.tryStartAutoScroll();
   }
 
   onResize(): void {
-    this.switchCurrentImage(this.currentImageIndex);
+    this.goToIndex(this.currentImageIndex);
+  }
+
+  nextImage(): void {
+    this.goToIndex((this.currentImageIndex + 1) % this.imagesLength);
+  }
+
+  previousImage(): void {
+    // apparently JS % means remainder, not modulo
+    // so doing this like nextImage(), but with - instead of + 
+    // results in trying to go to image index -1. 
+    // instead, we just go to the previous unless you're at index 0
+    this.goToIndex(this.currentImageIndex === 0 ? this.imagesLength - 1 : this.currentImageIndex - 1);
   }
 }

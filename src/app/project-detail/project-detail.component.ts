@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { Project, Content, Image } from '../project';
+import { Project, Content, Image, ImageOrImageList } from '../project';
 import { ProjectService } from '../project.service';
 
 @Component({
@@ -21,12 +21,15 @@ export class ProjectDetailComponent implements OnInit {
 
   public project: Project;
   public isWidescreen: boolean;
-  public separatedContent: { blurbs: string[], images: Image[] }
+  public separatedContent: { blurbs: string[], images: ImageOrImageList[] };
 
   ngOnInit() {
     this.route.params.subscribe(routeParams => {
       this.getProject(routeParams.id);
     });
+  }
+
+  ngAfterViewInit() {
     this.onResize();
   }
 
@@ -39,14 +42,39 @@ export class ProjectDetailComponent implements OnInit {
   			});
   	}
 
-  	isImage(content: any): boolean {
-  		if (content.loc !== undefined && 
-  			content.fname !== undefined) {
+    isImage(content: Content): content is Image {
+      return ((content as Image).loc !== undefined
+        && (content as Image).fname !== undefined);
+    }
+    
+    isString(content: Content): content is string {
+      return typeof(content) === "string";
+    }
+        
+    isImageArray(content: Content): content is Image[] {
+      return Array.isArray(content);
+    }
+
+  	isImg(content: Content): boolean {
+  		if (this.isImage(content)) {
   			return true;
-  		} else {
-  			return false;
-  		}
+  		} 
+  		return false;
   	}
+
+    isBlurb(content: Content): boolean {
+      if (this.isString(content)) {
+        return true;
+      }
+      return false;
+    }
+
+    isImageList(content: Content): boolean {
+      if (this.isImageArray(content)) {
+        return true;
+      } 
+      return false;
+    }
 
     onResize(): void {
       this.isWidescreen = innerWidth > 1389;
@@ -55,12 +83,11 @@ export class ProjectDetailComponent implements OnInit {
     separateContent(): void {
       this.separatedContent = { blurbs: [], images: [] };
       for (const content of this.project.arrangedContent) {
-        if (typeof content === "string") {
+        if (this.isString(content)) {
           this.separatedContent.blurbs.push(content);
         } else {
           this.separatedContent.images.push(content);
         }
       }
     }
-
 }

@@ -1,27 +1,34 @@
-<div id="content-container"> 
+<div *ngIf="project" id="content-container"> 
 	<h2>{{project.name}}</h2>
 
 	<!-- layout for mobile or if the screen width is too small -->
 	<div *ngIf="!isWidescreen">
 		<ul> 
 			<li *ngFor="let content of project.arrangedContent">
-				<div *ngIf="isImage(content)">
+				<div *ngIf="isImg(content)">
 					<img src="{{content.loc}}{{content.fname}}" class="image" />
 				</div>
-				<div *ngIf="!isImage(content)">
+				<div *ngIf="isBlurb(content)">
 					<p class="blurb">{{content}}</p>
+				</div>
+				<div *ngIf="isImageList(content)">
+					<app-splash [content]="content" [useAutoScroll]="false" [useSideButtons]="true" [useWideContent]="true"></app-splash>
 				</div>
 			</li>
 		</ul>
-		<a routerLink="/projects">back</a>
 	</div>
 
 	<!-- layout for widescreen/desktop -->
 	<div *ngIf="isWidescreen" id="widescreen-view">
 		<div id="imageContent">
 			<ul> 
-				<li *ngFor="let image of separatedContent.images">
-					<img src="{{image.loc}}{{image.fname}}" class="image" />
+				<li *ngFor="let content of separatedContent.images">
+					<div *ngIf="isImg(content)">
+						<img src="{{content.loc}}{{content.fname}}" class="image" />
+					</div>
+					<div *ngIf="isImageList(content)">
+						<app-splash [content]="content" [useAutoScroll]="false" [useSideButtons]="true" [useWideContent]="true"></app-splash>
+					</div>
 				</li>
 			</ul>
 		</div>

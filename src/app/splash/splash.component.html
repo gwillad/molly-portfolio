@@ -1,21 +1,39 @@
 <div id='splash'>
-	<div #slideContainer id="slide-container">
+	<div *ngIf="useSideButtons"  [ngClass]="{ 'button': true, 'wide-right-button': useWideContent, 'small-right-button': !useWideContent }"  (click)="nextImage()">
+		<svg height="20px" width="20px" xmlns="http://www.w3.org/2000/svg">
+			<path d="M 7 4 L 13 10 L 7 16" fill="transparent" stroke="black" />
+		</svg>
+	</div>
+
+	<div *ngIf="useSideButtons" [ngClass]="{ 'button': true, 'wide-left-button': useWideContent, 'small-left-button': !useWideContent }" (click)="previousImage()">
+		<svg height="20px" width="20px" xmlns="http://www.w3.org/2000/svg">
+			<path d="M 13 4 L 7 10 L 13 16" fill="transparent" stroke="black" />
+		</svg>
+	</div>
+
+	<!-- images -->
+	<div #slideContainer [ngClass]="{ 'wide-slide-container': useWideContent, 'small-slide-container': !useWideContent }">
 		<div id="slide-images" [style.transform]="currentSlideTransform" [attr.data-img-count]="imagesLength">
 			<img *ngFor="let image of images" src="{{image.loc}}{{image.fname}}" [attr.data-img-count]="imagesLength" />
 		</div>
 	</div>
-	<ul>
-		<li *ngFor="let image of images; let i = index" (click)="goToIndex(i)" class="button">
-			<div *ngIf='i === currentImageIndex'>
-				<svg height="10px" width="10px" xmlns="http://www.w3.org/2000/svg">
-					<ellipse cx="5" cy="5" rx="5" ry="5" />
-				</svg>
-			</div>
-			<div *ngIf='i !== currentImageIndex'>
-				<svg height="10px" width="10px" xmlns="http://www.w3.org/2000/svg">
-					<ellipse cx="5" cy="5" rx="2" ry="2" />
-				</svg>
-			</div>
-		</li>
-	</ul>
+	
+
+	<!-- divots -->
+	<div *ngIf="!useSideButtons">
+		<ul>
+			<li *ngFor="let image of images; let i = index" (click)="goToIndex(i)" class="button">
+				<div *ngIf='i === currentImageIndex'>
+					<svg height="10px" width="10px" xmlns="http://www.w3.org/2000/svg">
+						<ellipse cx="5" cy="5" rx="5" ry="5" />
+					</svg>
+				</div>
+				<div *ngIf='i !== currentImageIndex'>
+					<svg height="10px" width="10px" xmlns="http://www.w3.org/2000/svg">
+						<ellipse cx="5" cy="5" rx="2" ry="2" />
+					</svg>
+				</div>
+			</li>
+		</ul>
+	</div>
 </div>

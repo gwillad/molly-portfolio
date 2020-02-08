@@ -14,7 +14,15 @@ export const PROJECTS: Project[] = [
 			"another blurb", 
 			"a third blurb that's a bit longer." + lorem + lorem + lorem, 
 			{loc: "assets/images/", fname: "inl-3.jpg"}, 
-			"a fourth blurb"
+			"a fourth blurb",
+			[
+				{loc: "assets/images/", fname: "inl-2.jpg"},
+				{loc: "assets/images/", fname: "pnnl-1.jpg"},
+				{loc: "assets/images/", fname: "jax-2.jpg"},
+				{loc: "assets/images/", fname: "jax-1.jpg"},
+				{loc: "assets/images/", fname: "pnnl-2.jpg"},
+				{loc: "assets/images/", fname: "inl-1.jpg"},
+			],
 		],
 		repImage: {loc: "assets/images/", fname: "inl-1.jpg"}, 
 	},
