@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 import { ProjectService } from '../project.service';
 import { Image } from '../project';
@@ -6,14 +6,22 @@ import { Image } from '../project';
 @Component({
   selector: 'app-splash',
   templateUrl: './splash.component.html',
-  styleUrls: ['./splash.component.css']
+  styleUrls: ['./splash.component.css'],
+   host: {
+    '(window:resize)': 'onResize()',
+  }
 })
 export class SplashComponent implements OnInit {
 
   constructor(private projectService: ProjectService) { }
 
   public images: Image[];
+  public imagesLength: number = 0;
+  public currentSlideTransform: string = "";
+  @ViewChild('slideContainer', {static: false}) slideContainer: ElementRef;
+
   currentImageIndex: number;
+  imageTimer: NodeJS.Timer | null;
 
   ngOnInit() {
   	this.getSplashImages();
@@ -23,14 +31,17 @@ export class SplashComponent implements OnInit {
   	this.projectService.getSplashImages()
   		.subscribe(images => {
 	  		this.images = images;
-	  		this.currentImageIndex = 0;
+        this.imagesLength = images.length;
 	  		this.switchCurrentImage(0);
 	  		this.startImageSwitching();
   		});
   }
 
   startImageSwitching(): void {
-  	setTimeout(() => this.switchImage(), 5000);
+    if (this.imageTimer) {
+      clearTimeout(this.imageTimer);
+    }
+  	this.imageTimer = setTimeout(() => this.switchImage(), 5000);
   }
 
   switchImage(): void {
@@ -39,8 +50,24 @@ export class SplashComponent implements OnInit {
   }
 
   switchCurrentImage(newIndex: number): void {
-  	this.images[this.currentImageIndex].class = "hidden";
-  	this.images[newIndex].class = "";
-  	this.currentImageIndex = newIndex;
+    this.currentImageIndex = newIndex;
+
+    const imageWidth = this.slideContainer.nativeElement.offsetWidth;
+
+    const temp = newIndex * -imageWidth;
+    if (temp !== 0) {
+      this.currentSlideTransform = `translateX(${temp}px)`;
+    } else {
+      this.currentSlideTransform = "";
+    }
+  }
+
+  goToIndex(i: number): void {
+    this.switchCurrentImage(i);
+    this.startImageSwitching();
+  }
+
+  onResize(): void {
+    this.switchCurrentImage(this.currentImageIndex);
   }
 }

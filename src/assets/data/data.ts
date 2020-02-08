@@ -176,9 +176,10 @@ export const RESUME: Resume = {
 };
 
 export const SPLASH: Image[] = [
-	{loc: "assets/images/", fname: "inl-1.jpg", class: "hidden"},
-	{loc: "assets/images/", fname: "inl-2.jpg", class: "hidden"},
-	{loc: "assets/images/", fname: "pnnl-1.jpg", class: "hidden"},
-	{loc: "assets/images/", fname: "pnnl-2.jpg", class: "hidden"},
-	{loc: "assets/images/", fname: "jax-2.jpg", class: "hidden"},
+	{loc: "assets/images/", fname: "inl-2.jpg"},
+	{loc: "assets/images/", fname: "pnnl-1.jpg"},
+	{loc: "assets/images/", fname: "jax-2.jpg"},
+	{loc: "assets/images/", fname: "jax-1.jpg"},
+	{loc: "assets/images/", fname: "pnnl-2.jpg"},
+	{loc: "assets/images/", fname: "inl-1.jpg"},
 ]
