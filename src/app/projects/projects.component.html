@@ -4,8 +4,9 @@
 	<ul>
 		<li *ngFor="let project of projects"> 
 			<div class="image-wrap" routerLink="/details/{{project.id}}">
-				<img class="image" src="{{project.repImage.loc}}{{project.repImage.fname}}" />
-				<p class="image-description">{{project.name}}</p>
+				<img class="rep-image" src="{{project.repImage.loc}}{{project.repImage.fname}}" />
+				<img class="rep-image rep-hover-image hover" src="{{project.repHoverImage.loc}}{{project.repHoverImage.fname}}" />
+				<p class="hover">{{project.name}}</p>
 			</div>
 		</li>
 	</ul>

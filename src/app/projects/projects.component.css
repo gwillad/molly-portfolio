@@ -14,31 +14,26 @@ li {
 	width: 100%;
 }
 
-.image-description {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background: rgba(36, 36, 36, 0.7);
-	color: #fff;
+.hover {
 	visibility: hidden;
 	opacity: 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
 	transition: opacity .2s, visibility .2s;
 }
 
-.image-wrap:hover .image-description {
+.image-wrap:hover .hover {
 	visibility: visible;
 	opacity: 1;
 }
 
-.image {
+.rep-image {
 	max-width: 100%;
 	max-height: 100vw;
 	margin: auto;
 	object-fit: cover;
+}
+
+.rep-hover-image {
+	position: absolute;
+	top: 0;
+	left: 0;
 }

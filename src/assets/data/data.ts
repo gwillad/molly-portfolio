@@ -6,9 +6,10 @@ const lorem: string = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
 export const PROJECTS: Project[] = [
 	{ 
 		id: 11, 
-		name: "Industry Project", 
+		name: "Lobby Redesign", 
 		arrangedContent: [
-			{loc: "assets/images/", fname: "inl-1.jpg"}, 
+			"Content coming soon..."
+			/*{loc: "assets/images/", fname: "inl-1.jpg"}, 
 			"one blurb", 
 			{loc: "assets/images/", fname: "inl-2.jpg"}, 
 			"another blurb", 
@@ -22,15 +23,17 @@ export const PROJECTS: Project[] = [
 				{loc: "assets/images/", fname: "jax-1.jpg"},
 				{loc: "assets/images/", fname: "pnnl-2.jpg"},
 				{loc: "assets/images/", fname: "inl-1.jpg"},
-			],
+			],*/
 		],
-		repImage: {loc: "assets/images/", fname: "inl-1.jpg"}, 
+		repImage: {loc: "assets/images/projects-tiles/", fname: "Lobby_redesign_bw.jpg"}, 
+		repHoverImage: {loc: "assets/images/projects-tiles/", fname: "Lobby_redesign.jpg"}, 
 	},
 	{ 
 		id: 12, 
-		name: "Academic Project", 
+		name: "MKS", 
 		arrangedContent: [
-			{loc: "assets/images/", fname: "pnnl-1.jpg"}, 
+			"Content coming soon..."
+			/*{loc: "assets/images/", fname: "pnnl-1.jpg"}, 
 			"one" + lorem,
 			{loc: "assets/images/", fname: "pnnl-2.jpg"}, 
 			"two" + lorem + lorem,
@@ -41,137 +44,180 @@ export const PROJECTS: Project[] = [
 			{loc: "assets/images/", fname: "pnnl-5.jpg"}, 
 			"four" + lorem+ lorem+ lorem+ lorem,
 			{loc: "assets/images/", fname: "pnnl-6.jpg"}, 
-			"five" + lorem+ lorem+ lorem+ lorem+ lorem,
+			"five" + lorem+ lorem+ lorem+ lorem+ lorem,*/
 		],
-		repImage: {loc: "assets/images/", fname: "pnnl-5.jpg"}, 
+		repImage: {loc: "assets/images/projects-tiles/", fname: "MKS-1_bw.jpg"}, 
+		repHoverImage: {loc: "assets/images/projects-tiles/", fname: "MKS-1.jpg"}, 
 	},
 	{ 
 		id: 13,
-		name: "Thesis Project", 
+		name: "C3", 
 		arrangedContent: [
-			{loc: "assets/images/", fname: "jax-1.jpg"}, 
+			"Content coming soon..."
+/*			{loc: "assets/images/", fname: "jax-1.jpg"}, 
 			"one" + lorem,
 			{loc: "assets/images/", fname: "jax-2.jpg"}, 
 			"two" + lorem + lorem,
 			{loc: "assets/images/", fname: "jax-3.jpg"},
 			"two" + lorem+ lorem, 
 			{loc: "assets/images/", fname: "jax-4.jpg"}, 
-			"three" + lorem+ lorem+ lorem,
+			"three" + lorem+ lorem+ lorem,*/
 		],
-		repImage: {loc: "assets/images/", fname: "jax-4.jpg"}, 
+		repImage: {loc: "assets/images/projects-tiles/", fname: "C3_bw.jpg"}, 
+		repHoverImage: {loc: "assets/images/projects-tiles/", fname: "C3.jpg"}, 
 	},	
 	{ 
 		id: 14, 
-		name: "are Project", 
+		name: "GSL", 
 		arrangedContent: [
-			{loc: "assets/images/", fname: "inl-1.jpg"}, 
+			"Content coming soon..."
+			/*{loc: "assets/images/", fname: "inl-1.jpg"}, 
 			"one blurb", 
 			{loc: "assets/images/", fname: "inl-2.jpg"}, 
 			"another blurb", 
 			"a third blurb that's a bit longer." + lorem + lorem + lorem, 
 			{loc: "assets/images/", fname: "inl-3.jpg"}, 
-			"a fourth blurb"
-		],
-		repImage: {loc: "assets/images/", fname: "inl-1.jpg"}, 
-	},	
+			"a fourth blurb"*/
+		],		
+		repImage: {loc: "assets/images/projects-tiles/", fname: "GSL_bw.jpg"}, 
+		repHoverImage: {loc: "assets/images/projects-tiles/", fname: "GSL.jpg"}, 
+	},
 	{ 
 		id: 15, 
-		name: "are Project", 
+		name: "ESC", 
 		arrangedContent: [
-			{loc: "assets/images/", fname: "inl-1.jpg"}, 
+			"Content coming soon..."
+			/*{loc: "assets/images/", fname: "inl-1.jpg"}, 
 			"one blurb", 
 			{loc: "assets/images/", fname: "inl-2.jpg"}, 
 			"another blurb", 
 			"a third blurb that's a bit longer." + lorem + lorem + lorem, 
 			{loc: "assets/images/", fname: "inl-3.jpg"}, 
-			"a fourth blurb"
+			"a fourth blurb"*/
 		],
-		repImage: {loc: "assets/images/", fname: "pnnl-1.jpg"}, 
-	},	
+		repImage: {loc: "assets/images/projects-tiles/", fname: "ESC_bw.jpg"}, 
+		repHoverImage: {loc: "assets/images/projects-tiles/", fname: "ESC.jpg"}, 
+	},
 	{ 
 		id: 16, 
-		name: "are Project", 
+		name: "Master Plan", 
 		arrangedContent: [
-			{loc: "assets/images/", fname: "inl-1.jpg"}, 
+			"Content coming soon..."
+			/*{loc: "assets/images/", fname: "inl-1.jpg"}, 
 			"one blurb", 
 			{loc: "assets/images/", fname: "inl-2.jpg"}, 
 			"another blurb", 
 			"a third blurb that's a bit longer." + lorem + lorem + lorem, 
 			{loc: "assets/images/", fname: "inl-3.jpg"}, 
-			"a fourth blurb"
+			"a fourth blurb"*/
 		],
-		repImage: {loc: "assets/images/", fname: "jax-1.jpg"}, 
-	},	
+		repImage: {loc: "assets/images/projects-tiles/", fname: "Master-Plan_bw.jpg"}, 
+		repHoverImage: {loc: "assets/images/projects-tiles/", fname: "Master-Plan.jpg"}, 
+	},
 	{ 
 		id: 17, 
-		name: "are Project", 
+		name: "Final Project", 
 		arrangedContent: [
-			{loc: "assets/images/", fname: "inl-1.jpg"}, 
+			"Content coming soon..."
+			/*{loc: "assets/images/", fname: "inl-1.jpg"}, 
 			"one blurb", 
 			{loc: "assets/images/", fname: "inl-2.jpg"}, 
 			"another blurb", 
 			"a third blurb that's a bit longer." + lorem + lorem + lorem, 
 			{loc: "assets/images/", fname: "inl-3.jpg"}, 
-			"a fourth blurb"
+			"a fourth blurb"*/
 		],
-		repImage: {loc: "assets/images/", fname: "inl-1.jpg"}, 
-	},	
+		repImage: {loc: "assets/images/projects-tiles/", fname: "Final-Project_bw.jpg"}, 
+		repHoverImage: {loc: "assets/images/projects-tiles/", fname: "Final-Project.jpg"}, 
+	},
 	{ 
 		id: 18, 
-		name: "are Project", 
+		name: "Arcology", 
 		arrangedContent: [
-			{loc: "assets/images/", fname: "inl-1.jpg"}, 
+			"Content coming soon..."
+			/*{loc: "assets/images/", fname: "inl-1.jpg"}, 
 			"one blurb", 
 			{loc: "assets/images/", fname: "inl-2.jpg"}, 
 			"another blurb", 
 			"a third blurb that's a bit longer." + lorem + lorem + lorem, 
 			{loc: "assets/images/", fname: "inl-3.jpg"}, 
-			"a fourth blurb"
+			"a fourth blurb"*/
 		],
-		repImage: {loc: "assets/images/", fname: "pnnl-1.jpg"}, 
-	},	
+		repImage: {loc: "assets/images/projects-tiles/", fname: "Arcology_bw.jpg"}, 
+		repHoverImage: {loc: "assets/images/projects-tiles/", fname: "Arcology.jpg"}, 
+	},
 	{ 
 		id: 19, 
-		name: "are Project", 
+		name: "Folded Plane", 
 		arrangedContent: [
-			{loc: "assets/images/", fname: "inl-1.jpg"}, 
+			"Content coming soon..."
+			/*{loc: "assets/images/", fname: "inl-1.jpg"}, 
 			"one blurb", 
 			{loc: "assets/images/", fname: "inl-2.jpg"}, 
 			"another blurb", 
 			"a third blurb that's a bit longer." + lorem + lorem + lorem, 
 			{loc: "assets/images/", fname: "inl-3.jpg"}, 
-			"a fourth blurb"
+			"a fourth blurb"*/
 		],
-		repImage: {loc: "assets/images/", fname: "jax-1.jpg"}, 
-	},	
+		repImage: {loc: "assets/images/projects-tiles/", fname: "Folded-Plane_bw.jpg"}, 
+		repHoverImage: {loc: "assets/images/projects-tiles/", fname: "Folded-Plane.jpg"}, 
+	},
 	{ 
 		id: 20, 
-		name: "are Project", 
+		name: "Migrant Housing", 
 		arrangedContent: [
-			{loc: "assets/images/", fname: "inl-1.jpg"}, 
+			"Content coming soon..."
+			/*{loc: "assets/images/", fname: "inl-1.jpg"}, 
 			"one blurb", 
 			{loc: "assets/images/", fname: "inl-2.jpg"}, 
 			"another blurb", 
 			"a third blurb that's a bit longer." + lorem + lorem + lorem, 
 			{loc: "assets/images/", fname: "inl-3.jpg"}, 
-			"a fourth blurb"
+			"a fourth blurb"*/
 		],
-		repImage: {loc: "assets/images/", fname: "inl-1.jpg"}, 
-	},	
+		repImage: {loc: "assets/images/projects-tiles/", fname: "Migrant-Housing_bw.jpg"}, 
+		repHoverImage: {loc: "assets/images/projects-tiles/", fname: "Migrant-Housing.jpg"}, 
+	},
 	{ 
 		id: 21, 
-		name: "are Project", 
+		name: "Cafe Design", 
 		arrangedContent: [
-			{loc: "assets/images/", fname: "inl-1.jpg"}, 
+			"Content coming soon..."
+			/*{loc: "assets/images/", fname: "inl-1.jpg"}, 
 			"one blurb", 
 			{loc: "assets/images/", fname: "inl-2.jpg"}, 
 			"another blurb", 
 			"a third blurb that's a bit longer." + lorem + lorem + lorem, 
 			{loc: "assets/images/", fname: "inl-3.jpg"}, 
-			"a fourth blurb"
+			"a fourth blurb"*/
 		],
-		repImage: {loc: "assets/images/", fname: "pnnl-1.jpg"}, 
-	}
+		repImage: {loc: "assets/images/projects-tiles/", fname: "Cafe-Design_bw.jpg"}, 
+		repHoverImage: {loc: "assets/images/projects-tiles/", fname: "Cafe-Design.jpg"}, 
+	},	
+	{ 
+		id: 22, 
+		name: "Intersect", 
+		arrangedContent: [
+			"Content coming soon...",
+			"In the mean time, enjoy this representation of what the site is capable of:",
+			{loc: "assets/images/", fname: "inl-1.jpg"}, 
+			"We can display images", 
+			{loc: "assets/images/", fname: "inl-2.jpg"}, 
+			"We can display text: \n" + lorem + lorem + lorem,  
+			{loc: "assets/images/", fname: "inl-3.jpg"}, 
+			"and we can display several images together",
+			[
+				{loc: "assets/images/", fname: "inl-2.jpg"},
+				{loc: "assets/images/", fname: "pnnl-1.jpg"},
+				{loc: "assets/images/", fname: "jax-2.jpg"},
+				{loc: "assets/images/", fname: "jax-1.jpg"},
+				{loc: "assets/images/", fname: "pnnl-2.jpg"},
+				{loc: "assets/images/", fname: "inl-1.jpg"},
+			],
+		],
+		repImage: {loc: "assets/images/projects-tiles/", fname: "Intersect_bw.jpg"}, 
+		repHoverImage: {loc: "assets/images/projects-tiles/", fname: "Intersect.jpg"}, 
+	},
 ];
 
 export const ABOUT: About = {

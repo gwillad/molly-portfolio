@@ -9,4 +9,5 @@ export class Project {
 	name: string;
 	arrangedContent: Content[];
 	repImage: Image;
+	repHoverImage: Image;
 }
