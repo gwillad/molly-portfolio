@@ -12,6 +12,13 @@
 	margin: 0 auto;
 }
 
+.mobile-slide-container {
+	height: auto;
+	width: 95%;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
 #slide-images { 
 	transition: all 1s ease-in-out;
 }

@@ -1,4 +1,4 @@
-<div id='splash'>
+<div id='splash' [ngClass]="{'widescreen': isWidescreen, 'mobile': !isWidescreen}">
 	<div *ngIf="useSideButtons"  [ngClass]="{ 'button': true, 'wide-right-button': useWideContent, 'small-right-button': !useWideContent }"  (click)="nextImage()">
 		<svg height="20px" width="20px" xmlns="http://www.w3.org/2000/svg">
 			<path d="M 7 4 L 13 10 L 7 16" fill="transparent" stroke="black" />
@@ -12,7 +12,7 @@
 	</div>
 
 	<!-- images -->
-	<div #slideContainer [ngClass]="{ 'wide-slide-container': useWideContent, 'small-slide-container': !useWideContent }">
+	<div #slideContainer [ngClass]="{ 'wide-slide-container': useWideContent, 'small-slide-container': !useWideContent && isWidescreen, 'mobile-slide-container': !useWideContent && !isWidescreen }">
 		<div id="slide-images" [style.transform]="currentSlideTransform" [attr.data-img-count]="imagesLength">
 			<img *ngFor="let image of images" src="{{image.loc}}{{image.fname}}" [attr.data-img-count]="imagesLength" />
 		</div>

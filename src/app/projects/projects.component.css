@@ -2,9 +2,40 @@
 	text-align: center;
 }
 
-li {
+.widescreen {
+	width: 75%;
+	margin: auto;
+}
+
+.mobile {
+	width: 95%;
+	margin: auto;
+}
+
+.widescreen-li {
 	width: 25%;
-	padding: 50px;
+	padding: 0;
+}
+
+.mobile-li {
+	width: 48%;
+	padding: 0;
+}
+
+.image-left-widescreen {
+	padding-right: 12.5%;
+}
+
+.image-right-widescreen { 
+	padding-left: 12.5%;	
+}
+
+.image-left-mobile {
+	padding-right: 2%;
+}
+
+.image-right-mobile { 
+	padding-left: 2%;	
 }
 
 .image-wrap {

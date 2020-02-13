@@ -1,12 +1,12 @@
 <app-splash></app-splash>
 
-<div id="projects"> 
+<div id="projects" [ngClass]="{'widescreen': isWidescreen, 'mobile': !isWidescreen}"> 
 	<ul>
-		<li *ngFor="let project of projects"> 
+		<li *ngFor="let project of projects; let i = index" [ngClass]="{'image-left-widescreen': (i % 3 === 0) && isWidescreen, 'image-right-widescreen': (i % 3 === 2) && isWidescreen, 'image-left-mobile': (i % 2 === 0) && !isWidescreen, 'image-right-mobile': (i % 2 === 1) && !isWidescreen, 'widescreen-li': isWidescreen, 'mobile-li': !isWidescreen}"> 
 			<div class="image-wrap" routerLink="/details/{{project.id}}">
 				<img class="rep-image" src="{{project.repImage.loc}}{{project.repImage.fname}}" />
 				<img class="rep-image rep-hover-image hover" src="{{project.repHoverImage.loc}}{{project.repHoverImage.fname}}" />
-				<p class="hover">{{project.name}}</p>
+				<h2 class="hover project-name">{{project.name}}</h2>
 			</div>
 		</li>
 	</ul>

@@ -19,6 +19,7 @@ export class SplashComponent implements OnInit {
   public images: Image[];
   public imagesLength: number = 0;
   public currentSlideTransform: string = "";
+  public isWidescreen: boolean;
   @ViewChild('slideContainer', { static: false }) slideContainer: ElementRef;
 
   // input vars
@@ -86,6 +87,7 @@ export class SplashComponent implements OnInit {
 
   onResize(): void {
     this.goToIndex(this.currentImageIndex);
+    this.isWidescreen = innerWidth > 1389;
   }
 
   nextImage(): void {
