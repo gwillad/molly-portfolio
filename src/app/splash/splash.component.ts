@@ -47,11 +47,13 @@ export class SplashComponent implements OnInit {
     if (this.content !== null) {
       this.images = this.content;
       this.imagesLength = this.images.length;
+      this.checkWidescreen();
     } else {
   	this.projectService.getSplashImages()
   		.subscribe(images => {
 	  		this.images = images;
         this.imagesLength = images.length;
+        this.checkWidescreen();
   		});
     }
   }
@@ -87,7 +89,7 @@ export class SplashComponent implements OnInit {
 
   onResize(): void {
     this.goToIndex(this.currentImageIndex);
-    this.isWidescreen = innerWidth > 1389;
+    this.checkWidescreen();
   }
 
   nextImage(): void {
@@ -100,5 +102,9 @@ export class SplashComponent implements OnInit {
     // results in trying to go to image index -1. 
     // instead, we just go to the previous unless you're at index 0
     this.goToIndex(this.currentImageIndex === 0 ? this.imagesLength - 1 : this.currentImageIndex - 1);
+  }
+
+  checkWidescreen(): void {
+    this.isWidescreen = innerWidth > 1389;
   }
 }

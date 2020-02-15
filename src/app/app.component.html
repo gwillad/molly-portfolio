@@ -1,7 +1,9 @@
 <div id="titlebar">
   <app-menu></app-menu>
-  <h1 id="title">{{title}}</h1>
+  <div id="title">
+  	<h1 id="first-title">{{firstTitle}}</h1><pre *ngIf="isWidescreen">  </pre><h1 id="second-title">{{secondTitle}}</h1>
+  </div>
 </div>
 <div id="router-outlet">
-  <router-outlet></router-outlet>
+  	<router-outlet></router-outlet>
 </div>

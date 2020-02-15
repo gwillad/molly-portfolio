@@ -7,14 +7,14 @@
 
 .wide-slide-container {
 	height: auto;
-	width: 100%;
+	width: 90%;
 	overflow: hidden;
 	margin: 0 auto;
 }
 
 .mobile-slide-container {
 	height: auto;
-	width: 95%;
+	width: 90%;
 	overflow: hidden;
 	margin: 0 auto;
 }
@@ -143,7 +143,7 @@ img[data-img-count="10"] {
 
 .wide-left-button {
 	position: absolute;
-	left: -20px;
+	left: calc(5% - 20px);
 	top: calc(50% - 10px);
 }
 
@@ -155,7 +155,7 @@ img[data-img-count="10"] {
 
 .wide-right-button {
 	position: absolute;
-	left: 100%;
+	left: 95%;
 	top: calc(50% - 10px);
 }
 

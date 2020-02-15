@@ -1,24 +1,24 @@
 /* Application-wide Styles */
 h1 {
   color: #369;
-  font-family: helveticaNeueMedium, Helvetica, Arial, sans-serif;
+  font-family: helvetica-neue-67, Helvetica, Arial, sans-serif;
   font-size: 250%;
 }
+
 h2, h3 {
   color: #444;
-  font-family: helveticaNeueMedium, Helvetica, Arial, sans-serif;
+  font-family: helvetica-neue-67, Helvetica, Arial, sans-serif;
   font-weight: lighter;
 }
-body {
-  margin: 2em;
-}
+
 body, input[type="text"], button {
   color: #333;
   font-family: Cambria, Georgia;
 }
+
 /* everywhere else */
 * {
-  font-family: helveticaNeueMedium, Helvetica, Arial, sans-serif;
+  font-family: helvetica-neue-67, Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
   border: 0;
@@ -39,6 +39,16 @@ a {
 }
 
 @font-face {
-  font-family: helveticaNeueMedium;
-  src: url('/assets/fonts/helveticaneuemedium.ttf');
+  font-family: helvetica-neue-47;
+  src: url('/assets/fonts/HelveticaNeueLTStd47LtCn.otf');
+}
+
+@font-face {
+  font-family: helvetica-neue-67;
+  src: url('/assets/fonts/HelveticaNeueLTPro67MdCn.otf');
+}
+
+@font-face {
+  font-family: helvetica-neue-77;
+  src: url('/assets/fonts/HelveticaNeueLTPro77BdCn.otf');
 }

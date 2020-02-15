@@ -9,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
   }
 })
 export class AppComponent implements OnInit {
-  longTitle = "Molly Smith";
-  shortTitle = "MS";
-  title = this.longTitle;
+  longTitle = ["MOLLY", "SMITH"];
+  shortTitle = ["M", "S"];
+  firstTitle: string;
+  secondTitle: string;
   public isWidescreen: boolean = true;
 
   ngOnInit(): void {
@@ -23,9 +24,16 @@ export class AppComponent implements OnInit {
   	// in that case, we actually just remove the text
   	// when the screen is too small
   	if (innerWidth > 525) {
-  		this.title = this.longTitle;
+      this.isWidescreen = true;
+  		this.setTitle(this.longTitle);
   	} else {
-  		this.title = this.shortTitle;
+      this.isWidescreen = false;
+  		this.setTitle(this.shortTitle);
   	}
+  }
+
+  setTitle(title: string[]): void {
+    this.firstTitle = title[0];
+    this.secondTitle = title[1];
   }
 }

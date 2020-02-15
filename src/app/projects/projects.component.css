@@ -8,7 +8,7 @@
 }
 
 .mobile {
-	width: 95%;
+	width: 90%;
 	margin: auto;
 }
 
@@ -67,4 +67,10 @@
 	position: absolute;
 	top: 0;
 	left: 0;
+}
+
+#splash {
+	background-color: #FFF;
+	padding-top: 10px;
+	padding-bottom: 100px;
 }

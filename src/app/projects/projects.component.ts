@@ -33,5 +33,4 @@ export class ProjectsComponent implements OnInit {
   onResize(): void {
     this.isWidescreen = innerWidth > 1389;
   }
-
 }

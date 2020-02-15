@@ -10,9 +10,17 @@
 }
 
 #title {
-	color: #000;
 	margin: 10px;
 	padding: 0;
+	display: inline-flex;
+}
+
+h1 {
+	color: #000;
+}
+
+#first-title {
+	font-family: helvetica-neue-47, Helvetica, Arial, sans-serif;
 }
 
 app-menu {
@@ -22,5 +30,5 @@ app-menu {
 }
 
 #router-outlet {
-	margin-top: 73px;
+	margin-top: 63px;
 }
