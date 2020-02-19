@@ -2,11 +2,12 @@
 	position: fixed;
 	left: 0;
 	top: 0;
-	background: #fff;
+	background: #F9F9F9;
+	opacity: 95%;
 	height: 63px;
 	width: 100%;
 	z-index: 1000;
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid #F9F9F9;
 }
 
 #title {
@@ -24,11 +25,12 @@ h1 {
 }
 
 app-menu {
-	margin: 19px;
+	margin: 15px;
 	display: inline;
 	float: right;
 }
 
 #router-outlet {
-	margin-top: 63px;
+	margin-top: 83px;
+	margin-bottom: 50px;
 }

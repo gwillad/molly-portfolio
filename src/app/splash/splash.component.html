@@ -1,13 +1,16 @@
 <div id='splash' [ngClass]="{'widescreen': isWidescreen, 'mobile': !isWidescreen}">
+	<!-- side buttons --> 
 	<div *ngIf="useSideButtons"  [ngClass]="{ 'button': true, 'wide-right-button': useWideContent, 'small-right-button': !useWideContent }"  (click)="nextImage()">
-		<svg height="20px" width="20px" xmlns="http://www.w3.org/2000/svg">
-			<path d="M 7 4 L 13 10 L 7 16" fill="transparent" stroke="black" />
+		<svg height="40px" width="40px" xmlns="http://www.w3.org/2000/svg">
+			<rect width="40" height="40" fill="white" opacity="75%" />
+			<path d="M 10 5 L 30 20 L 10 35" fill="transparent" stroke="#333333" stroke-width="2"/>
 		</svg>
 	</div>
 
 	<div *ngIf="useSideButtons" [ngClass]="{ 'button': true, 'wide-left-button': useWideContent, 'small-left-button': !useWideContent }" (click)="previousImage()">
-		<svg height="20px" width="20px" xmlns="http://www.w3.org/2000/svg">
-			<path d="M 13 4 L 7 10 L 13 16" fill="transparent" stroke="black" />
+		<svg height="40px" width="40px" xmlns="http://www.w3.org/2000/svg">
+			<rect width="40" height="40" fill="white" opacity="75%" />
+			<path d="M 30 5 L 10 20 L 30 35" fill="transparent" stroke="#333333" stroke-width="2"/>
 		</svg>
 	</div>
 

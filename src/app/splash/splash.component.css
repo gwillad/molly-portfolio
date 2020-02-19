@@ -7,7 +7,7 @@
 
 .wide-slide-container {
 	height: auto;
-	width: 90%;
+	width: 95%;
 	overflow: hidden;
 	margin: 0 auto;
 }
@@ -143,9 +143,17 @@ img[data-img-count="10"] {
 
 .wide-left-button {
 	position: absolute;
-	left: calc(5% - 20px);
-	top: calc(50% - 10px);
+	left: 2.5%;
+	top: 0px;
+	height: 100%;
+	width: 40px;
 }
+
+.wide-left-button svg {
+	position: absolute;
+	top: calc(50% - 15px);
+	left: 0;
+}	
 
 .small-right-button {
 	position: absolute;
@@ -155,9 +163,17 @@ img[data-img-count="10"] {
 
 .wide-right-button {
 	position: absolute;
-	left: 95%;
-	top: calc(50% - 10px);
+	left: calc(97.5% - 40px);
+	top: 0px;
+	height: 100%;
+	width: 40px;
 }
+
+.wide-right-button svg {
+	position: absolute;
+	top: calc(50% - 15px);
+	left: 0;
+}	
 
 #splash {
 	text-align: center;
@@ -166,4 +182,10 @@ img[data-img-count="10"] {
 
 .button:hover {
 	cursor: pointer;
+	opacity: 75%;
+	background-color: #FFFFFF
+}
+
+.button {
+	z-index: 999;
 }

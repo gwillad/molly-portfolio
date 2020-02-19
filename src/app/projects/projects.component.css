@@ -2,12 +2,12 @@
 	text-align: center;
 }
 
-.widescreen {
+.projects-list-widescreen {
 	width: 75%;
 	margin: auto;
 }
 
-.mobile {
+.projects-list-mobile {
 	width: 90%;
 	margin: auto;
 }
@@ -18,8 +18,9 @@
 }
 
 .mobile-li {
-	width: 48%;
+	width: 70%;
 	padding: 0;
+	margin: auto;
 }
 
 .image-left-widescreen {
@@ -28,14 +29,6 @@
 
 .image-right-widescreen { 
 	padding-left: 12.5%;	
-}
-
-.image-left-mobile {
-	padding-right: 2%;
-}
-
-.image-right-mobile { 
-	padding-left: 2%;	
 }
 
 .image-wrap {
@@ -73,4 +66,8 @@
 	background-color: #FFF;
 	padding-top: 10px;
 	padding-bottom: 100px;
+}
+
+.project-badge {
+	padding-bottom: 10%;
 }

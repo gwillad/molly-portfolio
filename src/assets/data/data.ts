@@ -7,6 +7,7 @@ export const PROJECTS: Project[] = [
 	{ 
 		id: 11, 
 		name: "Lobby Redesign", 
+		subname: "Flad Architects",
 		arrangedContent: [
 			"Content coming soon..."
 			/*{loc: "assets/images/", fname: "inl-1.jpg"}, 

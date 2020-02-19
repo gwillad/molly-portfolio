@@ -4,7 +4,8 @@
 }
 
 .menu-link {
-	padding: 0 5px 0 5px;
+	padding: 0 7px 0 7px;
+	color: #000;
 }
 
 .menu-link:hover {

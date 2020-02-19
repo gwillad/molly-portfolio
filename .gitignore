@@ -41,6 +41,9 @@ yarn-error.log
 testem.log
 /typings
 
+#my own todo log
+todo.txt
+
 # System Files
 .DS_Store
 Thumbs.db

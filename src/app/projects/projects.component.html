@@ -1,12 +1,26 @@
 <div id="splash"><app-splash></app-splash></div>
 
-<div id="projects" [ngClass]="{'widescreen': isWidescreen, 'mobile': !isWidescreen}"> 
+<div id="projects" [ngClass]="{'projects-list-widescreen': isWidescreen, 
+							   'projects-list-mobile': !isWidescreen}"> 
 	<ul>
-		<li *ngFor="let project of projects; let i = index" [ngClass]="{'image-left-widescreen': (i % 3 === 0) && isWidescreen, 'image-right-widescreen': (i % 3 === 2) && isWidescreen, 'image-left-mobile': (i % 2 === 0) && !isWidescreen, 'image-right-mobile': (i % 2 === 1) && !isWidescreen, 'widescreen-li': isWidescreen, 'mobile-li': !isWidescreen}"> 
+		<li *ngFor="let project of projects; let i = index" 
+			[ngClass]="{'image-left-widescreen': (i % 3 === 0) && isWidescreen, 
+						'image-right-widescreen': (i % 3 === 2) && isWidescreen, 
+						'widescreen-li': isWidescreen, 
+						'mobile-li': !isWidescreen, 
+						'project-badge': true}"> 
 			<div class="image-wrap" routerLink="/details/{{project.id}}">
-				<img class="rep-image" src="{{project.repImage.loc}}{{project.repImage.fname}}" />
-				<img class="rep-image rep-hover-image hover" src="{{project.repHoverImage.loc}}{{project.repHoverImage.fname}}" />
-				<h2 class="hover project-name">{{project.name}}</h2>
+				<div *ngIf="isWidescreen">
+					<img class="rep-image" src="{{project.repImage.loc}}{{project.repImage.fname}}" />
+					<img class="rep-image rep-hover-image hover" src="{{project.repHoverImage.loc}}{{project.repHoverImage.fname}}" />
+				</div>
+				<div *ngIf="!isWidescreen">
+					<!-- on mobile, we don't get the benefit of being able to hover, so this cool feature just goes away for the 
+						best representation for the project. -->					
+					<img class="rep-image" src="{{project.repHoverImage.loc}}{{project.repHoverImage.fname}}" />
+				</div>
+				<h2 class="project-name">{{project.name}}</h2>
+				<h3 class="project-subname">{{project.subname}}</h3>
 			</div>
 		</li>
 	</ul>
