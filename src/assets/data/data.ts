@@ -10,21 +10,6 @@ export const PROJECTS: Project[] = [
 		subname: "Flad Architects",
 		arrangedContent: [
 			"Content coming soon..."
-			/*{loc: "assets/images/", fname: "inl-1.jpg"}, 
-			"one blurb", 
-			{loc: "assets/images/", fname: "inl-2.jpg"}, 
-			"another blurb", 
-			"a third blurb that's a bit longer." + lorem + lorem + lorem, 
-			{loc: "assets/images/", fname: "inl-3.jpg"}, 
-			"a fourth blurb",
-			[
-				{loc: "assets/images/", fname: "inl-2.jpg"},
-				{loc: "assets/images/", fname: "pnnl-1.jpg"},
-				{loc: "assets/images/", fname: "jax-2.jpg"},
-				{loc: "assets/images/", fname: "jax-1.jpg"},
-				{loc: "assets/images/", fname: "pnnl-2.jpg"},
-				{loc: "assets/images/", fname: "inl-1.jpg"},
-			],*/
 		],
 		repImage: {loc: "assets/images/projects-tiles/", fname: "Lobby_redesign_bw.jpg"}, 
 		repHoverImage: {loc: "assets/images/projects-tiles/", fname: "Lobby_redesign.jpg"}, 
@@ -34,18 +19,6 @@ export const PROJECTS: Project[] = [
 		name: "MKS", 
 		arrangedContent: [
 			"Content coming soon..."
-			/*{loc: "assets/images/", fname: "pnnl-1.jpg"}, 
-			"one" + lorem,
-			{loc: "assets/images/", fname: "pnnl-2.jpg"}, 
-			"two" + lorem + lorem,
-			{loc: "assets/images/", fname: "pnnl-3.jpg"},
-			"two" + lorem+ lorem, 
-			{loc: "assets/images/", fname: "pnnl-4.jpg"}, 
-			"three" + lorem+ lorem+ lorem,
-			{loc: "assets/images/", fname: "pnnl-5.jpg"}, 
-			"four" + lorem+ lorem+ lorem+ lorem,
-			{loc: "assets/images/", fname: "pnnl-6.jpg"}, 
-			"five" + lorem+ lorem+ lorem+ lorem+ lorem,*/
 		],
 		repImage: {loc: "assets/images/projects-tiles/", fname: "MKS-1_bw.jpg"}, 
 		repHoverImage: {loc: "assets/images/projects-tiles/", fname: "MKS-1.jpg"}, 
@@ -55,14 +28,6 @@ export const PROJECTS: Project[] = [
 		name: "C3", 
 		arrangedContent: [
 			"Content coming soon..."
-/*			{loc: "assets/images/", fname: "jax-1.jpg"}, 
-			"one" + lorem,
-			{loc: "assets/images/", fname: "jax-2.jpg"}, 
-			"two" + lorem + lorem,
-			{loc: "assets/images/", fname: "jax-3.jpg"},
-			"two" + lorem+ lorem, 
-			{loc: "assets/images/", fname: "jax-4.jpg"}, 
-			"three" + lorem+ lorem+ lorem,*/
 		],
 		repImage: {loc: "assets/images/projects-tiles/", fname: "C3_bw.jpg"}, 
 		repHoverImage: {loc: "assets/images/projects-tiles/", fname: "C3.jpg"}, 
@@ -72,13 +37,6 @@ export const PROJECTS: Project[] = [
 		name: "GSL", 
 		arrangedContent: [
 			"Content coming soon..."
-			/*{loc: "assets/images/", fname: "inl-1.jpg"}, 
-			"one blurb", 
-			{loc: "assets/images/", fname: "inl-2.jpg"}, 
-			"another blurb", 
-			"a third blurb that's a bit longer." + lorem + lorem + lorem, 
-			{loc: "assets/images/", fname: "inl-3.jpg"}, 
-			"a fourth blurb"*/
 		],		
 		repImage: {loc: "assets/images/projects-tiles/", fname: "GSL_bw.jpg"}, 
 		repHoverImage: {loc: "assets/images/projects-tiles/", fname: "GSL.jpg"}, 
@@ -88,13 +46,6 @@ export const PROJECTS: Project[] = [
 		name: "ESC", 
 		arrangedContent: [
 			"Content coming soon..."
-			/*{loc: "assets/images/", fname: "inl-1.jpg"}, 
-			"one blurb", 
-			{loc: "assets/images/", fname: "inl-2.jpg"}, 
-			"another blurb", 
-			"a third blurb that's a bit longer." + lorem + lorem + lorem, 
-			{loc: "assets/images/", fname: "inl-3.jpg"}, 
-			"a fourth blurb"*/
 		],
 		repImage: {loc: "assets/images/projects-tiles/", fname: "ESC_bw.jpg"}, 
 		repHoverImage: {loc: "assets/images/projects-tiles/", fname: "ESC.jpg"}, 
@@ -104,13 +55,6 @@ export const PROJECTS: Project[] = [
 		name: "Master Plan", 
 		arrangedContent: [
 			"Content coming soon..."
-			/*{loc: "assets/images/", fname: "inl-1.jpg"}, 
-			"one blurb", 
-			{loc: "assets/images/", fname: "inl-2.jpg"}, 
-			"another blurb", 
-			"a third blurb that's a bit longer." + lorem + lorem + lorem, 
-			{loc: "assets/images/", fname: "inl-3.jpg"}, 
-			"a fourth blurb"*/
 		],
 		repImage: {loc: "assets/images/projects-tiles/", fname: "Master-Plan_bw.jpg"}, 
 		repHoverImage: {loc: "assets/images/projects-tiles/", fname: "Master-Plan.jpg"}, 
@@ -120,13 +64,6 @@ export const PROJECTS: Project[] = [
 		name: "Final Project", 
 		arrangedContent: [
 			"Content coming soon..."
-			/*{loc: "assets/images/", fname: "inl-1.jpg"}, 
-			"one blurb", 
-			{loc: "assets/images/", fname: "inl-2.jpg"}, 
-			"another blurb", 
-			"a third blurb that's a bit longer." + lorem + lorem + lorem, 
-			{loc: "assets/images/", fname: "inl-3.jpg"}, 
-			"a fourth blurb"*/
 		],
 		repImage: {loc: "assets/images/projects-tiles/", fname: "Final-Project_bw.jpg"}, 
 		repHoverImage: {loc: "assets/images/projects-tiles/", fname: "Final-Project.jpg"}, 
@@ -136,13 +73,6 @@ export const PROJECTS: Project[] = [
 		name: "Arcology", 
 		arrangedContent: [
 			"Content coming soon..."
-			/*{loc: "assets/images/", fname: "inl-1.jpg"}, 
-			"one blurb", 
-			{loc: "assets/images/", fname: "inl-2.jpg"}, 
-			"another blurb", 
-			"a third blurb that's a bit longer." + lorem + lorem + lorem, 
-			{loc: "assets/images/", fname: "inl-3.jpg"}, 
-			"a fourth blurb"*/
 		],
 		repImage: {loc: "assets/images/projects-tiles/", fname: "Arcology_bw.jpg"}, 
 		repHoverImage: {loc: "assets/images/projects-tiles/", fname: "Arcology.jpg"}, 
@@ -152,13 +82,6 @@ export const PROJECTS: Project[] = [
 		name: "Folded Plane", 
 		arrangedContent: [
 			"Content coming soon..."
-			/*{loc: "assets/images/", fname: "inl-1.jpg"}, 
-			"one blurb", 
-			{loc: "assets/images/", fname: "inl-2.jpg"}, 
-			"another blurb", 
-			"a third blurb that's a bit longer." + lorem + lorem + lorem, 
-			{loc: "assets/images/", fname: "inl-3.jpg"}, 
-			"a fourth blurb"*/
 		],
 		repImage: {loc: "assets/images/projects-tiles/", fname: "Folded-Plane_bw.jpg"}, 
 		repHoverImage: {loc: "assets/images/projects-tiles/", fname: "Folded-Plane.jpg"}, 
@@ -168,13 +91,6 @@ export const PROJECTS: Project[] = [
 		name: "Migrant Housing", 
 		arrangedContent: [
 			"Content coming soon..."
-			/*{loc: "assets/images/", fname: "inl-1.jpg"}, 
-			"one blurb", 
-			{loc: "assets/images/", fname: "inl-2.jpg"}, 
-			"another blurb", 
-			"a third blurb that's a bit longer." + lorem + lorem + lorem, 
-			{loc: "assets/images/", fname: "inl-3.jpg"}, 
-			"a fourth blurb"*/
 		],
 		repImage: {loc: "assets/images/projects-tiles/", fname: "Migrant-Housing_bw.jpg"}, 
 		repHoverImage: {loc: "assets/images/projects-tiles/", fname: "Migrant-Housing.jpg"}, 
@@ -184,13 +100,6 @@ export const PROJECTS: Project[] = [
 		name: "Cafe Design", 
 		arrangedContent: [
 			"Content coming soon..."
-			/*{loc: "assets/images/", fname: "inl-1.jpg"}, 
-			"one blurb", 
-			{loc: "assets/images/", fname: "inl-2.jpg"}, 
-			"another blurb", 
-			"a third blurb that's a bit longer." + lorem + lorem + lorem, 
-			{loc: "assets/images/", fname: "inl-3.jpg"}, 
-			"a fourth blurb"*/
 		],
 		repImage: {loc: "assets/images/projects-tiles/", fname: "Cafe-Design_bw.jpg"}, 
 		repHoverImage: {loc: "assets/images/projects-tiles/", fname: "Cafe-Design.jpg"}, 
@@ -201,19 +110,19 @@ export const PROJECTS: Project[] = [
 		arrangedContent: [
 			"Content coming soon...",
 			"In the mean time, enjoy this representation of what the site is capable of:",
-			{loc: "assets/images/", fname: "inl-1.jpg"}, 
-			"We can display images", 
-			{loc: "assets/images/", fname: "inl-2.jpg"}, 
+			{loc: "assets/images/splash/", fname: "slider-01.jpg"},
+			{loc: "assets/images/splash/", fname: "slider-02.jpg"},
 			"We can display text: \n" + lorem + lorem + lorem,  
-			{loc: "assets/images/", fname: "inl-3.jpg"}, 
+			{loc: "assets/images/splash/", fname: "slider-03.jpg"},
 			"and we can display several images together",
 			[
-				{loc: "assets/images/", fname: "inl-2.jpg"},
-				{loc: "assets/images/", fname: "pnnl-1.jpg"},
-				{loc: "assets/images/", fname: "jax-2.jpg"},
-				{loc: "assets/images/", fname: "jax-1.jpg"},
-				{loc: "assets/images/", fname: "pnnl-2.jpg"},
-				{loc: "assets/images/", fname: "inl-1.jpg"},
+				{loc: "assets/images/splash/", fname: "slider-04.jpg"},
+				{loc: "assets/images/splash/", fname: "slider-05.jpg"},
+				{loc: "assets/images/splash/", fname: "slider-06.jpg"},
+				{loc: "assets/images/splash/", fname: "slider-07.jpg"},
+				{loc: "assets/images/splash/", fname: "slider-08.jpg"},
+				{loc: "assets/images/splash/", fname: "slider-09.jpg"},
+				{loc: "assets/images/splash/", fname: "slider-10.jpg"},
 			],
 		],
 		repImage: {loc: "assets/images/projects-tiles/", fname: "Intersect_bw.jpg"}, 
@@ -231,10 +140,14 @@ export const RESUME: Resume = {
 };
 
 export const SPLASH: Image[] = [
-	{loc: "assets/images/", fname: "inl-2.jpg"},
-	{loc: "assets/images/", fname: "pnnl-1.jpg"},
-	{loc: "assets/images/", fname: "jax-2.jpg"},
-	{loc: "assets/images/", fname: "jax-1.jpg"},
-	{loc: "assets/images/", fname: "pnnl-2.jpg"},
-	{loc: "assets/images/", fname: "inl-1.jpg"},
+	{loc: "assets/images/splash/", fname: "slider-01.jpg"},
+	{loc: "assets/images/splash/", fname: "slider-02.jpg"},
+	{loc: "assets/images/splash/", fname: "slider-03.jpg"},
+	{loc: "assets/images/splash/", fname: "slider-04.jpg"},
+	{loc: "assets/images/splash/", fname: "slider-05.jpg"},
+	{loc: "assets/images/splash/", fname: "slider-06.jpg"},
+	{loc: "assets/images/splash/", fname: "slider-07.jpg"},
+	{loc: "assets/images/splash/", fname: "slider-08.jpg"},
+	{loc: "assets/images/splash/", fname: "slider-09.jpg"},
+	{loc: "assets/images/splash/", fname: "slider-10.jpg"},
 ]

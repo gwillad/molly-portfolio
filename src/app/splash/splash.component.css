@@ -1,6 +1,8 @@
 .small-slide-container {
 	height: auto;
-	width: 75%;
+	/*temporary use 58% for the missized images*/	
+	width: 58%;
+	/*width: 75%;*/
 	overflow: hidden;
 	margin: 0 auto;
 }
